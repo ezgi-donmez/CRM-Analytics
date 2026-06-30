@@ -7,9 +7,6 @@
 # 2. CLTV veri yapısını oluşturma
 # 3. BG/NBD ve Gamma-Gamma modelleri ile CLTV hesaplama
 # 4. CLTV'ye göre segment oluşturma
-# BONUS: Süreci fonksiyonlaştırma
-
-# Gerekli kütüphaneler
 
 import pandas as pd
 import datetime as dt
@@ -328,8 +325,6 @@ def create_cltv_prediction(dataframe, month=6):
 
     return cltv_final, segment_summary_final
 
-
-# Fonksiyonun çalıştırılması
 cltv_final_func, segment_summary_func = create_cltv_prediction(df1, month=6)
 print("\nFonksiyon çıktısı - ilk 5 gözlem:")
 print(cltv_final_func.head())
